@@ -16,7 +16,7 @@ const sampleMemories: Memory[] = [
     title: "Our First Dance",
     description: "The moment I knew you were my forever",
     date: "A beautiful evening",
-    image: "/placeholder.svg",
+    image: "/1.png",
     mood: "magical"
   },
   {
@@ -24,7 +24,7 @@ const sampleMemories: Memory[] = [
     title: "Sunset Together",
     description: "Every sunset is more beautiful with you",
     date: "Every golden hour",
-    image: "/placeholder.svg",
+    image: "/2.png",
     mood: "peaceful"
   },
   {
@@ -32,7 +32,7 @@ const sampleMemories: Memory[] = [
     title: "Morning Coffee",
     description: "Our quiet moments mean everything",
     date: "Every morning",
-    image: "/placeholder.svg",
+    image: "/5.png",
     mood: "warm"
   }
 ];
