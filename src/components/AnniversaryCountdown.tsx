@@ -11,29 +11,8 @@ export function AnniversaryCountdown() {
   const [isAnniversary, setIsAnniversary] = useState(false);
 
   useEffect(() => {
-    // Set anniversary date to tomorrow
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    tomorrow.setHours(0, 0, 0, 0);
-
-    const timer = setInterval(() => {
-      const now = new Date();
-      const difference = tomorrow.getTime() - now.getTime();
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
-      } else {
-        setIsAnniversary(true);
-        clearInterval(timer);
-      }
-    }, 1000);
-
-    return () => clearInterval(timer);
+    // Today is the anniversary! Show celebration immediately
+    setIsAnniversary(true);
   }, []);
 
   if (isAnniversary) {
@@ -42,10 +21,10 @@ export function AnniversaryCountdown() {
         <div className="celebration-animation mb-6">
           <div className="text-6xl mb-4 animate-bounce">🎉</div>
           <h2 className="love-text text-4xl font-bold text-foreground mb-4">
-            Happy Anniversary! 💕
+            Hurray! Today is our Anniversary! 🎉💕
           </h2>
           <p className="text-xl text-muted-foreground mb-4">
-            Today marks another beautiful chapter in our love story!
+            What a beautiful day to celebrate our love story!
           </p>
           <div className="flex justify-center gap-2">
             {[...Array(5)].map((_, i) => (
